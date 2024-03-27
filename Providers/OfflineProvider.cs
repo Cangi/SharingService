@@ -1,10 +1,11 @@
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using RealityCollective.ServiceFramework.Modules;
-using RealityCollective.ServiceFramework.Services;
 using UnityEngine;
 
 namespace SharingService.Providers

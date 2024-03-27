@@ -1,5 +1,6 @@
-#if PHOTON_INSTALLED
+// Licensed under the MIT License. See LICENSE in the project root for license information.
 
+#if PHOTON_INSTALLED
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;

@@ -1,4 +1,6 @@
-﻿#if PHOTON_INSTALLED
+﻿// Licensed under the MIT License. See LICENSE in the project root for license information.
+
+#if PHOTON_INSTALLED
 using ExitGames.Client.Photon;
 using Photon.Pun;
 using Photon.Realtime;

@@ -1,4 +1,6 @@
-﻿namespace SharingService.Avatars
+﻿// Licensed under the MIT License. See LICENSE in the project root for license information.
+
+namespace SharingService.Avatars
 {
     /// <summary>
     /// This describes the finger type.
