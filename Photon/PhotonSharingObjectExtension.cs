@@ -1,0 +1,50 @@
+#if PHOTON_INSTALLED
+using Photon.Pun;
+using RealityCollective.Extensions;
+using UnityEngine;
+
+namespace SharingService.Photon
+{
+    public static class PhotonSharingObjectExtension
+    { 
+        /// <summary>
+        /// Register the app's SharingObjects with Photon's networking framework.
+        /// </summary>
+        /// <remarks>
+        /// This helper functions removes the requirement of adding PhotonViews to the scene at compile time. 
+        /// Making it possible to dynamically switch between networking platforms.
+        /// </remarks>
+        public static void RegisterWithPhoton(this SharingObject[] sharingObjects)
+        {
+            if (sharingObjects != null && Application.isPlaying)
+            {
+                foreach (var sharingObject in sharingObjects)
+                {
+                    sharingObject.RegisterWithPhoton();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Register the app's SharingObject with the Photon's networking framework.
+        /// </summary>
+        /// <remarks>
+        /// This helper functions removes the requirement of adding NetObjects to the scene at compile time. 
+        /// Making it possible to dynamically switch between networking platforms.
+        /// </remarks>
+        public static void RegisterWithPhoton(this SharingObject sharingObject)
+        {
+            if (sharingObject != null && Application.isPlaying)
+            {
+                var photonView = sharingObject.EnsureComponent<PhotonView>();
+                if (photonView.ViewID != 0 &&
+                    int.TryParse(sharingObject.Label, out int netId))
+                {
+                    photonView.ViewID = netId;
+                    photonView.OwnershipTransfer = OwnershipOption.Takeover;
+                }
+            }
+        }
+    }
+}
+#endif // PHOTON_INSTALLED
