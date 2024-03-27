@@ -1,0 +1,25 @@
+{
+  "name": "com.sharingsevice.unity",
+  "displayName": "Sharing Service",
+  "description": "A service that allows creation of shared experiences",
+  "keywords": [],
+  "version": "1.0.0",
+  "unity": "2021.3",
+  "documentationUrl": "https://github.com/Cangi/SharingService#documentation",
+  "changelogUrl": "https://github.com/Cangi/SharingService/releases",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "repository": "https://github.com/Cangi/SharingService.git"
+  },
+  "author": {
+    "name": "Rony Portelli",
+    "url": "https://github.com/Cangi"
+  },
+  "dependencies": {
+
+  },
+  "publishConfig": {
+    "registry": "https://package.openupm.com"
+  }
+}
